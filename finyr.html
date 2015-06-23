@@ -1,0 +1,30 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+	function finyr(mydate){
+		var mfy = new Date(mydate);
+		console.log(mfy);
+		var y = mfy.getFullYear();
+		var m = mfy.getMonth();
+		var fy;
+		if ( m > 3 ) {
+			var y2 = y + 1;
+			var a = y2.toString().slice(2);
+			console.log(a);
+			fy = y + " - " + m;
+		}else {
+			var by = y - 1;
+			var ny = y.toString().slice(2);
+			fy = by + " - " + fy;
+		}
+		return fy;
+	}
+	
+	var kfy = finyr("2015-06-08");
+	console.log(kfy);
+	
+</script>
+</body>
+</html>
